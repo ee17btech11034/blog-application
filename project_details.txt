@@ -1,0 +1,23 @@
+Blog Application:
+    -- react is completely frontend library.
+        -- can not do backend stuff like Login, LogOut
+    -- we can use 'appwrite' for backend but we can use others as well
+
+Services:
+    -- appwrite :
+        -- for backend and it is opensource
+        -- appwrite is a complete backend service
+        -- similar 'firbase'
+    -- tiny MCE: 
+        -- text editor
+    -- html react parser:
+        -- we store content in html, to parse it we need this.
+    -- react hook form:
+        -- easy to create form
+
+# In depth details about this step will be provided in "stepdetails.txt" file.
+# You will find summary of previous step in process. 
+
+
+Process:
+    --> 

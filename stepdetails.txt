@@ -1,0 +1,54 @@
+# Create the project using vite      (USE CMD)
+    -- `npm create vite@latest`
+    -- `bun i` or `npm i`         to install deps
+    -- `npm i @reduxjs/toolkit react-redux react-router-dom`
+    -- `npm i appwrite @tinymce/tinymce-react html-react-parser react-hook-form`
+
+    -- inside blog-app folder:> `npm run dev`
+
+# create ENV file:
+    -- we need a file where we can store some confidential variables or system variables which must not ship to frontend.
+    -- this file must be in root (parallel to Readme file)
+    -- filename     
+            -- ".env"   this file will have all the important data like keys or apis
+            -- ".env.sample"      we create this file only with name so that we would know what are the variables we have used.
+    -- we ship .sample file not .env file.
+
+    -- Access to this .env file:
+        -- there are different ways like
+            -- different for frontend
+            -- different for backend
+            -- different for veu, react, vite, etc.
+        -- When create with Create-react-app:  https://create-react-app.dev/docs/adding-custom-environment-variables/#:~:text=These%20environment%20variables%20will%20be%20defined%20for%20you%20on%20process.env.%20For%20example%2C%20having%20an%20environment%20variable%20named%20REACT_APP_NOT_SECRET_CODE%20will%20be%20exposed%20in%20your%20JS%20as%20process.env.REACT_APP_NOT_SECRET_CODE
+            > `REACT_APP_APPWRITE_URL="test environment"` in .env file   --> naming statrt with "REACT_APP_<name>"      ****************************
+            > in app or anywhere access       `process.env.REACT_APP_APPWRITE_URL` --> we access using process
+        -- when create with vite:   https://vite.dev/guide/env-and-mode#:~:text=Variables%20prefixed%20with%20VITE_%20will%20be%20exposed%20in%20client%2Dside%20source%20code%20after%20Vite 
+            > `VITE_APPWRITE_URL="test environment"` in .env file   --> naming statrt with "VITE_<name>"      ****************************
+            > in app or anywhere access       `import.meta.env.REACT_APP_APPWRITE_URL` --> we access using process
+
+
+        -- if space is there in val then use "" or normal is file in .env file
+
+# Appwrite application:
+    -- Create an account > create project
+    -- Go to project > settings >
+            >        copy "project ID" and URl or Endpoint and put them in .env file
+            >        Services  > Right now we only need "Account, DB, Storage, User"
+    -- Go to Auth > settings > Auth Methods > check if services are active
+    -- Go to DataBases > create a db "blog" > copy the db-id and put in .env file
+            > DB can have multiple collection (like tables in SQL)
+                > create a collection "articles" and copy id and paste in .env file
+                    > setting > Permissions > we can give users permissions to Create, Read, Update, delete these collections
+                        > Add "user" and give all pemissions
+                    > columns > "create" columns for title, content, etc
+                    > indexes > we will create an index for sorting
+            > storage > create bucket "images" and copy and past id.
+                      > setting > permission > User to all permission
+
+# Acces to ENV Variables:
+    -- When we directly try to access "import.meta.env.VITE_APPWRITE_URL2" then 
+        -- chances we want to use this on multiple places
+        -- so not a good idea to call "import.meta.env.VITE_APPWRITE_URL2" everytime. 
+        -- we do not know if this variable value is a string or some other datatype. 
+    -- We create a "config" or "cconf" folder > "config.js" or "conf.js" file 
+        -- there we eill import all the variable and store them in seperate one and then export from there.
