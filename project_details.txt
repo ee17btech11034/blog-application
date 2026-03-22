@@ -20,4 +20,5 @@ Services:
 
 
 Process:
-    --> 
+    --> Create APP with VITE, Appwrite setup and ENV file is done in previous.
+    --> Authentic Service with Appwrite, vendor-lock-in free,
