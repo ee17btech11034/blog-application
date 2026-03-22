@@ -2,10 +2,10 @@
     -- we should write our code in such a way that we can move our code from one app to another if needed without much changes
     -- Never create a vendor lock-in
 
+Appwrite database, file upload and custom queries
 
-# Authentic Service with Appwrite:
+# Database Service with Appwrite:
     -- To avoid vendor lock-in we create Services that talk to backend. 
         -- creating a service named as "appwrite"
-            -- create a "auth.js"   https://appwrite.io/docs/products/auth/email-password
-            -- we added methods in a class. so that i can access these methods just by a dot(.). No need to pull this whole code everywhere.
-            -- In fuure if we want to use any other auth service then I just need to change this file.
+            -- parallel to auth.js we will create a file for db as well   https://appwrite.io/docs/references/cloud/client-web/databases 
+                -- queries can be run on indexes.

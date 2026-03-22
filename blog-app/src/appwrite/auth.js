@@ -36,7 +36,7 @@ export class AuthService {
 
     }
 
-    async signupUser({name, email, password}){
+    async signupUser({email, password}){
         try {
             //we need user_id unique which we will create we can generate  using            `ID.unique()`
             const user = await this.account.create({
