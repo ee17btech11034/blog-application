@@ -3,14 +3,47 @@
     -- Never create a vendor lock-in
 
 
-# Configure redux toolkit:
-    -- Create a store > store.js
-    -- create authSlice.js to update the store data for user.
-    -- we can create an slice for post as well
-        -- state.allpost, state.userpost
-    -- Lets create component to use these.
 
 # components:
     -- Create Header and Footer.
     -- In App.jsx, we want that when we are fetching datat from Appwrite, that time we show loading icon or something
     
+    -- Suppose we want to create a login/signup page. 
+        -- one way is we create 2 input filed in a form and add a submit button and handle state using onclick. 
+        -- But in production grade, there are chances that weneed this input field on many places. 
+            -- if we create form or write input then I will have to manage them all. 
+                -- like width on responsiveness, etc. 
+                -- manage 2 states or 1 state with 2 object values
+            -- Other way is "create a input-field box" component and use it on any place. 
+                -- single componet can be used for username, email, password, etc.
+                -- we create this "prop" related means we can pass props Header
+
+    -- create a container 
+            -- container accepts properties as a children / props
+            -- we define box-height, width, size or decoration things.
+    -- creating a login/out button as component. 
+
+    -- create a custom common button. 
+
+
+    ### useRef Hook:
+            -- now think, 
+                -- we have component in some place, 
+                -- we are using that on another place,
+                -- multiple of same type.
+                -- we need access of state of that button in its parent, How can we?
+                -- that's where we use "useRef hook" 
+                -- it helps us in "forward reference (ref)"
+
+
+    -- create input.jsx 
+        -- we wrap this in forwardRef to use it
+        -- we take "ref" as a prop from user. 
+        -- using this only we can access this value anywhere.
+        -- using this "ref' we can access the state of this input
+
+    -- create select button so user can select "my posts" or "all posts" things like this
+    -- create postcard
+
+    -- login/logout page:
+        -- we will build these components using "react Hook form"
