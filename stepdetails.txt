@@ -2,10 +2,15 @@
     -- we should write our code in such a way that we can move our code from one app to another if needed without much changes
     -- Never create a vendor lock-in
 
-Appwrite database, file upload and custom queries
 
-# Database Service with Appwrite:
-    -- To avoid vendor lock-in we create Services that talk to backend. 
-        -- creating a service named as "appwrite"
-            -- parallel to auth.js we will create a file for db as well   https://appwrite.io/docs/references/cloud/client-web/databases 
-                -- queries can be run on indexes.
+# Configure redux toolkit:
+    -- Create a store > store.js
+    -- create authSlice.js to update the store data for user.
+    -- we can create an slice for post as well
+        -- state.allpost, state.userpost
+    -- Lets create component to use these.
+
+# components:
+    -- Create Header and Footer.
+    -- In App.jsx, we want that when we are fetching datat from Appwrite, that time we show loading icon or something
+    
