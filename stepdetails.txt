@@ -4,10 +4,9 @@
 
 
 
-# components:
-    -- Real time Editor (RTE):
-        -- Using COntroller for this instead of useRef hook.
-    
-    -- We will take the values from Editor and handle it in "post-form" component.
+# pages:
+    -- create a folder "pages"
+    -- create specific .jsx files for pages. Like Login, logout, AddPost, EditPost, etc
 
-    
+# router:
+    -- We will wrap routes in AUthLayout
