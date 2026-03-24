@@ -5,10 +5,9 @@
 
 
 # components:
-    -- login/logout page:
-        -- we will build these components using "react Hook form"   https://react-hook-form.com/ 
-        -- LogIn component is done similar way we can create a SignUp. 
+    -- Real time Editor (RTE):
+        -- Using COntroller for this instead of useRef hook.
     
-    -- Authlayout.jsx : 
-        -- till now we did not write any protection mechanism. 
-        -- we create a container which is protected and decides if values needs to be shown or not.
+    -- We will take the values from Editor and handle it in "post-form" component.
+
+    

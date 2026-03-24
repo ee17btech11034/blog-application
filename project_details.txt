@@ -26,3 +26,4 @@ Process:
     --> redux toolkit
     --> create components
     --> "react Hook form"
+    --> Real time Editor (RTE)
