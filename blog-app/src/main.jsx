@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Home/>
+        element: <Home/> // from pages not comp
       },
       
       {

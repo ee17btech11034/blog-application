@@ -10,3 +10,21 @@
 
 # router:
     -- We will wrap routes in AUthLayout
+
+
+# CORS: 
+    -- Browser does not serve scross.
+    -- Suppose server is on another port in another computer and frontend is on another compoter another port. 
+    -- Browser blocks these request as browser can not trust. 
+
+    -- CORS is handled in backend 
+    
+    -- In appwrite:
+        -- go to project > Integration > Add platform {Web}
+            -- user name "localhost" or "*vercel"
+
+
+# deploy fronend.
+
+# Assignments:
+    -- 
