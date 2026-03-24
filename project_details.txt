@@ -20,8 +20,9 @@ Services:
 
 
 Process:
-    --> Create APP with VITE, Appwrite setup and ENV file is done in previous.
+    --> Create APP with VITE, Appwrite setup and ENV file
     --> Authentic Service with Appwrite, vendor-lock-in free,
     --> Appwrite database, file upload and custom queries
-    --> redux toolkit is done in previous
+    --> redux toolkit
     --> create components
+    --> "react Hook form"
